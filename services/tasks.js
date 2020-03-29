@@ -5,7 +5,7 @@ module.exports = app => {
   // Takes in a volunteer object
   createVolunteer = (req, res) => {
     const newUser = req.body;
-    volunteerModel.createVolunteerUser(newUser).then(user => {
+    volunteerModel.createVolunteerUser(newUser.volunteer).then(user => {
       res.send(user);
     });
   };

@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 // Enforces a schema on Mongodb
 // Prevents random errors
-const atRiskUserSchema = mongoose.Schema(
+const volunteerUserSchema = mongoose.Schema(
   {
     uuid: String, // firebase id
     firstName: String,
@@ -18,7 +18,10 @@ const atRiskUserSchema = mongoose.Schema(
 );
 
 // links the model to the schema
-const volunteerUserModel = mongoose.model("VolunteerModel", atRiskUserSchema);
+const volunteerUserModel = mongoose.model(
+  "VolunteerModel",
+  volunteerUserSchema
+);
 
 // Creates a user
 createVolunteerUser = user => {
