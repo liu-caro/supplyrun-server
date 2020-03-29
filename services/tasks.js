@@ -24,7 +24,7 @@ module.exports = app => {
     });
   };
 
-  // Take in VolunteerUUID and the Task Object
+  // Take in VolunteerUUID and the Task ID
   bindTask = async (req, res) => {
     const data = req.body;
     const { volunteerUUID, taskId } = data;
