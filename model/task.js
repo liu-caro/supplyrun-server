@@ -49,5 +49,6 @@ updateTask = (taskId, newTask) => {
 module.exports = {
   findAllTask,
   findTask,
+  createTask,
   updateTask
 };
