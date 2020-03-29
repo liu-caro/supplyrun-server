@@ -30,7 +30,7 @@ createTask = task => {
 
 // Finds a task
 findAllTask = () => {
-  return taskModel.find();
+  return taskModel.find({ completed: false, volunteer: undefined });
 };
 
 findTask = id => {
