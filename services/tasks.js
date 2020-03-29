@@ -13,7 +13,7 @@ module.exports = app => {
   // Takes in a task object
   createTask = (req, res) => {
     const newTask = req.body;
-    taskModel.createTask(newTask).then(task => {
+    taskModel.createTask(newTask.task).then(task => {
       res.send(task);
     });
   };
