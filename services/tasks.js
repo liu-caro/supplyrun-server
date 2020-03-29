@@ -42,6 +42,7 @@ module.exports = app => {
 
   // Take in a UUID from volunteer
   unbindTask = async (req, res) => {
+    const { volunteerUUID } = req.body;
     const volunteer = await volunteerModel.findVolunteerUser(volunteerUUID);
     const dbTaskId = volunteer.task || "";
     if (!dbTask) {
